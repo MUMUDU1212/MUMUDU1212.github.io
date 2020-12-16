@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--使用X-UA-Compatible来设置IE浏览器兼容模式 最新的渲染模式-->	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TEST 萌宠当家</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/notIndex.css">
+    <link rel="stylesheet" href="css/notIndex.css">
+    <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+  	<script src="js/jquery.min.js"></script>
+  	<!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+  	<script src="js/bootstrap.min.js"></script> 
+  </head>
+  <body>
+    <div class="main">
+        <div class="content">
+            <div class="top">
+                <div class="heardName">
+                    <div class="navImg">
+                        <img src="img/heard.png" alt="" srcset="">
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <li><a>返回首页</a></li>
+                            <li><a>设为首页</a></li>
+                            <li><a>添加收藏</a></li>
+                            <li><a>English</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navigate">
+                    <ul>
+                        <li><a onclick="window.location.href = './index.html';">首页</a></li>
+                        <li><a onclick="window.location.href = './aboutUs.html';">关于我们</a></li>
+                        <li><a onclick="window.location.href = './products.html';">产品展示</a></li>
+                        <li><a onclick="window.location.href = './pressCenter.html';">新闻中心</a></li>
+                        <li><a onclick="window.location.href = './onlineMessage.html';" class="active">在线留言</a></li>
+                        <li><a onclick="window.location.href = './contactUs.html';">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="middle">
+                <div>
+                    <img src="img/dog.jpg" alt="" srcset="">
+                </div>
+                <div class="right_top">
+                    <span>
+                        当前位置：<a onclick="window.location.href = './index.html';">首页</a>>><a>客户反馈</a>
+                    </span>
+                </div>
+                <div class="left">
+                    <div class="left_list">
+                        <div class="left_con">
+                            <div class="type_list">
+                                <ul>
+                                    <li class="first_cat"><a href="./products.html?id=1">Remote dog training collar</a></li>
+                                    <li class="first_cat"><a href="./products.html?id=2">Anti-Bark stopping collar</a></li>
+                                    <li class="first_cat"><a href="./products.html?id=3">Dog In-ground pet fencing system &Clicker</a></li>
+                                    <li class="first_cat"><a href="./products.html?id=4">other pet products</a></li>
+                                    <li class="first_cat"><a href="./products.html?id=5">Automatic pet feeder</a></li>
+                                    <li class="first_cat"><a href="./products.html?id=6">Shock Mat</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="right_con">
+                        <form method="post">
+                            <table class="bookBox" border="0" width="100%" align="center">
+                            <tbody>
+                            <tr>
+                            <td height="23" width="10%" align="right">姓名：</td>
+                            <td width="90%" colspan="2" align="left" ><input class="input_text" name="s1" type="text" /><font color="#ff0000">*</font></td>
+                            </tr>
+                            <tr>
+                            <td height="22" align="right">邮箱：</td>
+                            <td colspan="2" align="left"><input class="input_text" name="s2" type="text" /> <font color="#ff0000">*</font></td>
+                            </tr>
+                            <tr>
+                            <td height="22" align="right">电话：</td>
+                            <td colspan="2" align="left"><input id="telephone" class="input_text" name="s3" type="text" /> <font color="#ff0000">*</font></td>
+                            </tr>
+                            <tr>
+                            <td height="12" align="right">公司：</td>
+                            <td colspan="2" align="left"><input class="input_text" size="55" name="s4" type="text" /> <font color="#ff0000">*</font></td>
+                            </tr>
+                            <tr>
+                            <td height="22" align="right">地址：</td>
+                            <td colspan="2" align="left"><input id="address" class="input_text" size="55" name="s5" type="text" /> <font color="#ff0000">*</font></td>
+                            </tr>
+                            <tr>
+                            <td height="22" align="right">标题：</td>
+                            <td colspan="2" align="left"><input id="title" class="input_text" size="55" name="s6" type="text" /> <font color="#ff0000">*</font></td>
+                            </tr>
+                            
+                            <tr>
+                            <td valign="middle" align="right">内容：</td>
+                            <td colspan="2" align="left"><textarea id="textarea3" class="input_area" rows="5" cols="44" name="s7"></textarea> <font color="#ff0000">*</font> </td>
+                            </tr>
+                            <tr>
+                            <td height="12" align="right">验证码：</td>
+                            <td colspan="2" align="left"><input class="input_text" size="4" name="yzm" type="text" maxlength="4" />&nbsp;<font color="#ff0000">*</font></td>
+                            </tr>
+                            <tr>
+                            <td height="12" align="right">&nbsp;</td>
+                            <td colspan="2" align="left"><input id="submit" class="input_submit" type="submit" name="submit" value=" 提交 " /> <input class="input_submit" type="reset" name="Submit2" value=" 重置 " /></td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="copy_txt">
+                    深圳市健丰创新电子有限公司 2018-2028 版权所有   地址：广东省东莞市东城区光明社区光明一环路48号厂房A座
+                </div>
+                <br>
+                技术支持：<a>出格</a>&nbsp;&nbsp;<a>粤icp备17063822号</a><a><img width="25" height="35" style="border-width:0px;border:hidden; border:none;" src="https://szcert.ebs.org.cn/Images/govIcon.gif" alt=""></a>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+
+<script src="js/index.js"></script>
+<script src="js/productData.js"></script>
+<script>
+    $(function () {
+        let id = Number(getUrlParam("id"));
+    })
+</script>
+
+<style>
+    .right_con { width: 100%; float: left; padding: 20px 0; line-height: 200%; overflow-x: hidden; min-height: 300px; height: auto !important;}
+    .productList{width: 100%; float: left;}
+    .input_submit {width: 77px; height: 41px; float: left; background: url(img/search.png) no-repeat left top; text-align: center; line-height: 41px; color: #fff; border: 0px; cursor: pointer;}
+    .input_area{background: #fff url(img/inputbg.png) no-repeat left top; width: 501px; height: 80px; border: 0px; padding: 5px 10px; border: 1px solid #ccc;}
+    .input_text {background: url(img/inputbg.png) no-repeat left top; height: 25px; line-height: 25px; border: 1px solid #ccc; padding: 0 10px; float: left;}
+</style>

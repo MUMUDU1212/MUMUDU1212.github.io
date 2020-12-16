@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--使用X-UA-Compatible来设置IE浏览器兼容模式 最新的渲染模式-->	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TEST 萌宠当家</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/notIndex.css">
+    <link rel="stylesheet" href="css/notIndex.css">
+    <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+  	<script src="js/jquery.min.js"></script>
+  	<!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+  	<script src="js/bootstrap.min.js"></script> 
+  </head>
+  <body>
+    <div class="main">
+        <div class="content">
+            <div class="top">
+                <div class="heardName">
+                    <div class="navImg">
+                        <img src="img/heard.png" alt="" srcset="">
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <li><a>返回首页</a></li>
+                            <li><a>设为首页</a></li>
+                            <li><a>添加收藏</a></li>
+                            <li><a>English</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navigate">
+                    <ul>
+                        <li><a onclick="window.location.href = './index.html';">首页</a></li>
+                        <li><a onclick="window.location.href = './aboutUs.html';">关于我们</a></li>
+                        <li><a onclick="window.location.href = './products.html';" class="active">产品展示</a></li>
+                        <li><a onclick="window.location.href = './pressCenter.html';">新闻中心</a></li>
+                        <li><a onclick="window.location.href = './onlineMessage.html';">在线留言</a></li>
+                        <li><a onclick="window.location.href = './contactUs.html';">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="middle">
+                <div>
+                    <img src="img/dog.jpg" alt="" srcset="">
+                </div>
+                <div class="right_top">
+                    <span>
+                        当前位置：<a onclick="window.location.href = './index.html';">首页</a>>><a>产品展示</a>
+                    </span>
+                </div>
+                <div class="left">
+                    <div class="left_list">
+                        <div class="left_con">
+                            <div class="type_list">
+                                <ul>
+                                    <li class="first_cat"><a href="./products.html?id=1">Remote dog training collar</a></li>
+                                    <li class="first_cat"><a href="./products.html?id=2">Anti-Bark stopping collar</a></li>
+                                    <li class="first_cat"><a href="./products.html?id=3">Dog In-ground pet fencing system &Clicker</a></li>
+                                    <li class="first_cat"><a href="./products.html?id=4">other pet products</a></li>
+                                    <li class="first_cat"><a href="./products.html?id=5">Automatic pet feeder</a></li>
+                                    <li class="first_cat"><a href="./products.html?id=6">Shock Mat</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="right_con">
+                        <div class="productList">
+                            <ul></ul>
+                        </div>
+                        <div class="blank clear"></div>
+                        <div class="pages">
+                            共&nbsp;1 页 页次:1/1 页</span>&nbsp;
+                            <span class='nolink'>首页</span>&nbsp;
+                            <span class='nolink'>上一页</span>&nbsp;
+                            <span><font color=red>1</font></span>&nbsp;
+                            <span class='nolink'>下一页</span>&nbsp;
+                            <span class='nolink'>尾页</span>&nbsp;
+                            转到 <SELECT NAME="select" ONCHANGE="var jmpURL=this.options[this.selectedIndex].value ; if(jmpURL!='') {window.location=jmpURL;} else {this.selectedIndex=0 ;}" >
+                            <option value='#'  selected=selected>1</option>
+                            </SELECT>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="copy_txt">
+                    深圳市健丰创新电子有限公司 2018-2028 版权所有   地址：广东省东莞市东城区光明社区光明一环路48号厂房A座
+                </div>
+                <br>
+                技术支持：<a>出格</a>&nbsp;&nbsp;<a>粤icp备17063822号</a><a><img width="25" height="35" style="border-width:0px;border:hidden; border:none;" src="https://szcert.ebs.org.cn/Images/govIcon.gif" alt=""></a>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+
+<script src="js/index.js"></script>
+<script src="js/productData.js"></script>
+<script>
+    $(function () {
+        let id = Number(getUrlParam("id"));
+        let html = ''
+        if (id === 0) {
+            id = 1
+        }
+        for (let i = 0; i < productData.length; i++) {
+            if (productData[i].id === id) {
+                for (let j = 0; j < productData[i].products.length; j++) {
+                    html += `<li><a href='productDetails.html?id=${productData[i].products[j].pdtId}'><img src='${productData[i].products[j].img}' alt='${productData[i].products[j].productIntroduce}'></a><br /><a href='productDetails.html?id=${productData[i].products[j].pdtId}'>${productData[i].products[j].productIntroduce}</a></li>`
+                }
+            }
+        }
+        $('.productList ul').append(html)
+    })
+</script>
+
+<style>
+    .productList{width: 100%; float: left;}
+    .clear{clear: both;}
+    .productList ul { margin: 0px; padding: 0px; list-style-type: none;}
+    .productList li { margin: 5px 0px; padding: 0px; list-style-type: none; text-align: center; float: left; width: 210px; height: 210px; display: inline; line-height: 25px; overflow: hidden;}
+    .productList li img { width: 180px; height: 180px;}
+    .pages {font-size: 12px; text-align: center; padding: 10px 0px 10px 0px;}
+</style>
